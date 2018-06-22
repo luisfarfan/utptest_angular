@@ -13,7 +13,8 @@ export const routes: Routes = [
     redirectTo: 'login',
     pathMatch: 'full'
   },
-  {path: 'login', loadChildren: './login/login.module#LoginModule'}];
+  {path: 'login', loadChildren: './login/login.module#LoginModule'},
+  {path: 'notes', loadChildren: './notes/notes.module#NotesModule'}];
 
 @NgModule({
   declarations: [

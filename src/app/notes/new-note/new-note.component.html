@@ -1,0 +1,14 @@
+<mat-card>
+  <form [formGroup]="noteForm">
+    <div class="example-container">
+      <mat-form-field>
+        <input matInput formControlName="title" placeholder="Escriba el titulo">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput formControlName="description" placeholder="Escriba la descripción">
+      </mat-form-field>
+      <button type="button" mat-button (click)="create()" color="accent">Crear</button>
+    </div>
+  </form>
+</mat-card>

@@ -1,9 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NotesComponent } from './notes/notes.component';
-import {MatCardModule} from '@angular/material';
+import {
+  MatButtonModule, MatCardModule, MatFormFieldModule, MatGridListModule, MatInputModule, MatOptionModule,
+  MatSelectModule
+} from '@angular/material';
 import {LoginComponent} from '../login/login/login.component';
 import {RouterModule, Routes} from '@angular/router';
+import { NewNoteComponent } from './new-note/new-note.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 
 const appRoutes: Routes = [
@@ -13,9 +18,16 @@ const appRoutes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
+    MatFormFieldModule,
     MatCardModule,
+    MatInputModule,
+    MatGridListModule,
+    MatOptionModule,
+    MatSelectModule,
+    MatButtonModule,
+    ReactiveFormsModule,
     RouterModule.forChild(appRoutes)
   ],
-  declarations: [NotesComponent]
+  declarations: [NotesComponent, NewNoteComponent]
 })
 export class NotesModule { }

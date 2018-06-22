@@ -4,6 +4,7 @@ export interface IAuthBody {
 }
 
 export interface IAuthResponse {
+  id: number;
   user: string;
   password: string;
   name: string;
