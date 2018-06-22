@@ -1,0 +1,14 @@
+<mat-card>
+  <form [formGroup]="authForm">
+    <div class="example-container">
+      <mat-form-field>
+        <input matInput formControlName="username" placeholder="Escriba su usuario">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput formControlName="password" placeholder="Escriba su contraseña">
+      </mat-form-field>
+      <button mat-button color="accent">Entrar</button>
+    </div>
+  </form>
+</mat-card>

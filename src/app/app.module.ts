@@ -2,13 +2,34 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import {MatCardModule, MatFormFieldModule, MatGridListModule, MatInputModule, MatOptionModule, MatSelectModule} from '@angular/material';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {RouterModule, Routes} from '@angular/router';
+import {HttpClientModule} from '@angular/common/http';
+
+export const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'login',
+    pathMatch: 'full'
+  },
+  {path: 'login', loadChildren: './login/login.module#LoginModule'}];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatCardModule,
+    MatInputModule,
+    MatGridListModule,
+    MatOptionModule,
+    MatSelectModule,
+    HttpClientModule,
+    RouterModule.forRoot(routes, {useHash: false})
   ],
   providers: [],
   bootstrap: [AppComponent]
